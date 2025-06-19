@@ -1,0 +1,47 @@
+{
+	"Name": "AWS Lambda Invoke",
+	"Version": "0.1.0.0",
+	"Author": "MauriceBrg",
+	"Actions": [
+		{
+			"Name": "Async Invocation",
+			"UUID": "com.mauricebrg.lambda-invoke.invoke-async",
+			"Icon": "imgs/actions/lambda/lambda",
+			"Tooltip": "Invokes a Lambda Function asynchronously",
+			"PropertyInspectorPath": "ui/invoke-async.html",
+			"Controllers": [
+				"Keypad"
+			],
+			"States": [
+				{
+					"Image": "imgs/actions/lambda/lambda",
+					"TitleAlignment": "middle"
+				}
+			]
+		}
+	],
+	"Category": "AWS Lambda Invoke",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"CodePath": "bin/plugin.js",
+	"Description": "Invokes Lambda functions from the Stream Deck",
+	"Icon": "imgs/plugin/marketplace",
+	"SDKVersion": 2,
+	"Software": {
+		"MinimumVersion": "6.5"
+	},
+	"OS": [
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		},
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		}
+	],
+	"Nodejs": {
+		"Version": "20",
+		"Debug": "enabled"
+	},
+	"UUID": "com.mauricebrg.lambda-invoke"
+}

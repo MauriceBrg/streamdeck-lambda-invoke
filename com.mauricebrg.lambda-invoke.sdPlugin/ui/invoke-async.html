@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <title>Async Invocation Settings</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+
+<body>
+
+	<sdpi-item label="AWS Profile">
+    <sdpi-textfield
+        setting="lambdaSettings.profile"
+        placeholder="default"
+        default="default"
+        required>
+    </sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Region">
+    <sdpi-textfield
+        setting="lambdaSettings.region"
+        placeholder="eu-central-1"
+        default="eu-central-1"
+        required>
+    </sdpi-textfield>
+    </sdpi-item>
+
+    <sdpi-item label="Function Name">
+    <sdpi-textfield
+        setting="lambdaSettings.functionName"
+        pattern="(arn:(aws[a-zA-Z-]*)?:lambda:)?([a-z]{2}(-gov)?-[a-z]+-\d{1}:)?(\d{12}:)?(function:)?([a-zA-Z0-9-_\.]+)(:(\$LATEST|[a-zA-Z0-9-_]+))?"
+        placeholder="Lambda Function Name"
+        default="PythonDemo"
+        required>
+    </sdpi-textfield>
+    </sdpi-item>
+
+
+    <sdpi-item label="Event">
+        <sdpi-textarea
+            setting="lambdaSettings.event"
+            rows="5"
+            showlength
+            default="{}"
+            required>
+        </sdpi-textarea>
+    </sdpi-item>
+
+</body>
+
+</html>
